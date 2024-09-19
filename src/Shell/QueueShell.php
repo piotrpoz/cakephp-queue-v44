@@ -683,7 +683,9 @@ TEXT;
 	protected function _initPid() {
 		$pid = $this->_retrievePid();
 		$key = $this->QueuedJobs->key();
-		$this->QueueProcesses->add($pid, $key);
+		$jobType = $this->param('type');
+
+		$this->QueueProcesses->add($pid, $key, $jobType);
 
 		$this->_pid = $pid;
 
