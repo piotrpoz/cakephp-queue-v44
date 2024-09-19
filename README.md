@@ -7,6 +7,10 @@
 [![Total Downloads](https://poser.pugx.org/dereuromark/cakephp-queue/d/total)](https://packagist.org/packages/dereuromark/cakephp-queue)
 [![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
 
+__ FORK NOTES __
+This fork is to add a few features to the original plugin:
+- Add a `QueueProcesses.job_type` column and sets it to the job type when a job is created
+
 This branch is for use with **CakePHP 3.8+**. For details see [version map](https://github.com/dereuromark/cakephp-queue/wiki#cakephp-version-map).
 
 
