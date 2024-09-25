@@ -10,8 +10,12 @@
 
 This branch is for use with **CakePHP 4.4+**. For details see [version map](https://github.com/dereuromark/cakephp-queue/wiki#cakephp-version-map).
 
+__ FORK NOTES __
+This fork is to add a few features to the original plugin:
+- Add a `QueueProcesses.job_type` column and sets it to the job type when a job is created
 
 ## Background
+
 
 This is a very simple and minimalistic job queue (or deferred-task) system for CakePHP.
 If you need a very basic PHP internal queue tool, this is definitely an option.

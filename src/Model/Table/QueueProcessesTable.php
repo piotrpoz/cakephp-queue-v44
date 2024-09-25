@@ -91,6 +91,9 @@ class QueueProcessesTable extends Table {
 			->requirePresence('workerkey', 'create')
 			->notEmptyString('workerkey');
 
+		$validator->notEmptyString('job_type');
+
+
 		$validator
 			->add('server', 'validateCount', [
 				'rule' => 'validateCount',
@@ -134,14 +137,16 @@ class QueueProcessesTable extends Table {
 	/**
 	 * @param string $pid
 	 * @param string $key
+	 * @param string $jobType
 	 *
 	 * @return int
 	 */
-	public function add(string $pid, string $key): int {
+	public function add(string $pid, string $key, string $jobType): int {
 		$data = [
 			'pid' => $pid,
 			'server' => $this->buildServerString(),
 			'workerkey' => $key,
+			'job_type' => $jobType
 		];
 
 		$queueProcess = $this->newEntity($data);
