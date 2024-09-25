@@ -101,7 +101,7 @@ class Processor {
 	 */
 	public function run(array $args): int {
 		$config = $this->getConfig($args);
-		$jobType = join(',', $config['type']);
+		$jobType = join(',', $config['types']);
 		try {
 			$pid = $this->initPid($jobType);
 		} catch (PersistenceFailedException $exception) {
